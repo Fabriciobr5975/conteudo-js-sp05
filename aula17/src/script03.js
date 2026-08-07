@@ -13,14 +13,14 @@ function movimentoAnimacao() {
 
     function quadro() {
         if (posicao === 300 || inverter) {
-            posicao--;
-            elemento.style.top = posicao + "px";
-            elemento.style.left = posicao + "px";
             if (posicao === 0) {
                 elementoBotao.disabled = false;
                 clearInterval(id);
                 inverter = false;
             }
+            posicao--;
+            elemento.style.top = posicao + "px";
+            elemento.style.left = posicao + "px";
         } else {
             posicao++;
             elemento.style.top = posicao + "px";
