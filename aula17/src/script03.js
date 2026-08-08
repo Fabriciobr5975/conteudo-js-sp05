@@ -3,6 +3,7 @@ const elementoBotao = document.querySelector(".botao");
 
 function movimentoAnimacao() {
     elementoBotao.disabled = true;
+    elementoBotao.style.cursor = "not-allowed";
 
     const elemento = document.querySelector(".animacao");
     let id = null;
@@ -14,8 +15,9 @@ function movimentoAnimacao() {
     function quadro() {
         if (posicao === 300 || inverter) {
             if (posicao === 0) {
-                elementoBotao.disabled = false;
                 clearInterval(id);
+                elementoBotao.disabled = false;
+                elementoBotao.style.cursor = "auto";
                 inverter = false;
             }
             posicao--;
